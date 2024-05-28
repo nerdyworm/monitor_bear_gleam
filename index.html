@@ -1,0 +1,22 @@
+<html class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor Bear</title>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="src/bear_spa/main.css">
+  <script type="module">
+    import {main} from "./src/bear_spa/main.gleam"
+
+    document.addEventListener("DOMContentLoaded", () => {
+      main(import.meta.env.VITE_ENDPOINT, import.meta.env.VITE_ENDPOINT_SOCKET);
+    });
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

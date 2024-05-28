@@ -1,0 +1,12 @@
+[submodule "forks/lustre"]
+	path = forks/lustre
+	url = https://github.com/lustre-labs/lustre
+[submodule "forks/modem"]
+	path = forks/modem
+	url = git@github.com:nerdyworm/modem.git
+[submodule "forks/pgo"]
+	path = forks/pgo
+	url = git@github.com:nerdyworm/pgo.git
+[submodule "forks/fox"]
+	path = forks/fox
+	url = git@github.com:nerdyworm/fox.git

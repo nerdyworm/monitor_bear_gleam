@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-base text-text;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-base px-2.5 py-1.5 rounded-md font-medium transition duration-300 ease-in-out inline-block;
+    @apply bg-base text-subtext0 hover:bg-crust;
+  }
+
+  .btn.small {
+    @apply px-2 py-0.5 text-sm;
+  }
+
+  .btn-primary {
+    @apply text-base px-2.5 py-1.5 rounded-md font-medium transition duration-300 ease-in-out inline-block;
+    @apply bg-lavender hover:bg-lavender/75;
+  }
+
+  .btn-danger {
+    @apply text-base px-2.5 py-1.5 rounded-md font-medium transition duration-300 ease-in-out inline-block;
+    @apply bg-red/75 text-white hover:bg-red/100;
+  }
+
+  .status-card {
+    /* @apply px-4 py-5 bg-gradient-to-b rounded-md overflow-hidden; */
+    @apply px-4 py-5 rounded-md overflow-hidden;
+  }
+
+  .status-card-label {
+    @apply text-muted;
+  }
+
+  .status-card-value {
+    @apply mt-1 text-3xl font-semibold text-white;
+  }
+
+  .history-record-icon {
+    @apply w-8 h-8 rounded-full text-base items-center justify-center flex;
+  }
+
+  .history-record-kind {
+    @apply text-subtext0;
+  }
+}
+
+@layer components {
+  .page-header {
+    @apply flex h-16 items-center;
+  }
+
+  .page-header h1 {
+    @apply text-2xl font-bold;
+  }
+
+  .page-actions {
+    @apply ml-auto space-x-4 flex items-center;
+  }
+
+  .page-body {
+    @apply pt-4;
+  }
+}
+
+@layer components {
+  .form-input[type="email"],
+  .form-input[type="text"],
+  .form-input[type="number"],
+  .form-input[type="password"],
+  select.form-input {
+    @apply bg-crust rounded w-full border border-mantle;
+    @apply focus:outline-none focus:ring-1 focus:ring-sky focus:border-sky;
+  }
+
+  input:-webkit-autofill{
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-background-clip: text;
+  }
+
+  .form-checkbox {
+    @apply appearance-none mr-2 rounded-md border-base text-base bg-crust p-2.5; 
+    @apply focus:ring-0 focus:ring-offset-0 focus:outline-none checked:bg-crust focus:checked:bg-crust;
+  }
+
+
+  select.form-input option {
+    @apply bg-crust;
+  }
+
+  .form-group {
+    @apply mb-8;
+  }
+
+  .form-label {
+    @apply block mb-2 font-medium;
+  }
+
+  .form-group.has-error .validation-error {
+    @apply text-red;
+  }
+
+  .form-group.has-error .form-input[type="text"]:not(:focus) {
+    @apply border-red;
+  }
+
+  .form-group.has-error .form-label {
+    @apply text-red;
+  }
+
+  .form-hint {
+    @apply text-sm text-subtext0 py-2;
+  }
+}
+
+@layer components {
+  .table {
+    @apply w-full bg-mantle rounded-md;
+  }
+
+  .table > thead > tr > th {
+    @apply bg-crust text-left py-4 px-4;
+  }
+
+  .table > thead > tr > th:first-child {
+    @apply rounded-tl-md;
+  }
+
+  .table > thead > tr > th:last-child {
+    @apply rounded-tr-md;
+  }
+
+  .table > tbody {
+    @apply divide-y divide-crust;
+  }
+
+  .table > tbody > tr > td {
+    @apply py-4 px-4;
+  }
+}

@@ -1,0 +1,22 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: "25.1"
+          gleam-version: "0.34.0"
+          rebar3-version: "3"
+      - run: gleam build
+      # TODO: enable testing again
+      # - run: gleam test
+      - run: gleam format --check src test
